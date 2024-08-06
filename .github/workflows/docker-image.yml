@@ -26,3 +26,4 @@ jobs:
         # Run the default target or a specific target
         make image
         make push
+        docker run --rm -it -d -p 5000:5000 pushparaj1994/python-demoapp:latest
