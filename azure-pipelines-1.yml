@@ -16,6 +16,6 @@ steps:
     script: |
       # Write your commands here
       make image
-      make push
+      # make push
     workingDirectory: '$(Build.SourcesDirectory)' # Use the directory where your repo is cloned
     
