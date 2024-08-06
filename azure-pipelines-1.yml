@@ -12,3 +12,11 @@ steps:
       # Write your commands here
       make image
     workingDirectory: '$(Build.SourcesDirectory)' # Use the directory where your repo is cloned
+    
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      push image
+    workingDirectory: '$(Build.SourcesDirectory)' # Use the directory where your repo is cloned
