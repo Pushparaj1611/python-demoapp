@@ -1,0 +1,14 @@
+# Docker
+# Build a Docker image
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+- master
+
+resources:
+- repo: self
+
+- task: CmdLine@2
+  inputs:
+    script: 'sh "make images"'
+    workingDirectory: '*'
