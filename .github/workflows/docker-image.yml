@@ -19,4 +19,5 @@ jobs:
 
         # Run the default target or a specific target
         make image
+        make push
 
