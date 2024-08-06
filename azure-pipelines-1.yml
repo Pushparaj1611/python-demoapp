@@ -15,7 +15,7 @@ steps:
     workingDirectory: '$(Build.SourcesDirectory)' # Use the directory where your repo is cloned
 - task: Docker@2
   inputs:
-    containerRegistry: 'docker'
+    containerRegistry: 'd1'
     command: 'login'
 
 
