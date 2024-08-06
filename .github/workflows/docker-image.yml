@@ -13,11 +13,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}  # Replace with your Docker username
+        password: ${{ secrets.DOCKER_PASSWORD }}  # Replace with your Docker password or token
+        registry: ${{ secrets.DOCKER_REGISTRY }}  # Optional, defaults to Docker Hub if not set
+
     - name: Run Makefile
       run: |
-
-
         # Run the default target or a specific target
         make image
         make push
-
