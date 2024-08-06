@@ -4,6 +4,15 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest' # Specifies the virtual machine image to use for the job
 steps:
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      make image
+      # make push
+    workingDirectory: '$(Build.SourcesDirectory)' # Use the directory where your repo is cloned
 - task: Docker@2
   inputs:
     containerRegistry: 'docker'
@@ -15,7 +24,7 @@ steps:
     targetType: 'inline'
     script: |
       # Write your commands here
-      make image
-      # make push
+      
+      make push
     workingDirectory: '$(Build.SourcesDirectory)' # Use the directory where your repo is cloned
     
