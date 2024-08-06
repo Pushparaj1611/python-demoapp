@@ -18,6 +18,7 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}  # Replace with your Docker username
         password: ${{ secrets.DOCKER_PASSWORD }}  # Replace with your Docker password or token
+        registry: ${{ secrets.DOCKER_REGISTRY }}
         
 
     - name: Run Makefile
