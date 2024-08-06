@@ -8,7 +8,11 @@ trigger:
 resources:
 - repo: self
 
-- task: CmdLine@2
+- task: Bash@3
   inputs:
-    script: 'sh "make images"'
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      sh "make image"
     workingDirectory: '*'
